@@ -59,8 +59,8 @@ export default {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1100px;
             margin: 0 auto;
+            max-width: 1100px;
 
             img {
                 width: 80px;

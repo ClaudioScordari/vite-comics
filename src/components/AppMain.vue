@@ -17,8 +17,16 @@ export default {
     <main>
         
         <section>
+            <div class="jumbotron">
+                <!-- img background -->
+            </div>
+
             <div class="container">
-                sezione 1
+
+                <div class="all-comics">
+                    comics
+                </div>
+
             </div>
         </section>
 
@@ -98,8 +106,14 @@ export default {
         > section:nth-of-type(1){
             color: white;
             background-color: #1C1C1C;
-            padding-top: 50px;
             padding-bottom: 50px;
+
+            .jumbotron{
+                width: 100%;
+                height: 450px;
+                background-image: url('/public/img/jumbotron.jpg');
+                background-size: 100% auto;
+            }
         }
 
         > section:nth-of-type(2){

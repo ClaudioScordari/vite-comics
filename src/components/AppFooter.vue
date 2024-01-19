@@ -296,9 +296,12 @@ export default {
     }
 
     footer{
+
         > section:nth-of-type(1){
             background-image: url('/public/img/footer-bg.jpg');
-            object-fit: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             > .container {
                 display: flex;
                 align-items: center;

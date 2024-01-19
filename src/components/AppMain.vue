@@ -77,6 +77,28 @@ export default {
                     "series": "Catwoman",
                     "type": "graphic novel",
                 }
+            ],
+            datasNav: [
+                {
+                    img: '/public/img/buy-comics-digital-comics.png',
+                    text: 'DIGITAL COMICS'
+                },
+                {
+                    img: '/public/img/buy-comics-merchandise.png',
+                    text: 'DC MERCHANDISE'
+                },
+                {
+                    img: '/public/img/buy-comics-shop-locator.png',
+                    text: 'COMIC SHOP LOCATOR'
+                },
+                {
+                    img: '/public/img/buy-comics-subscriptions.png',
+                    text: 'SUBSCIPTIONS'
+                },
+                {
+                    img: '/public/img/buy-dc-power-visa.svg',
+                    text: 'DC POWER VISA'
+                }   
             ]
         }
     },
@@ -125,53 +147,13 @@ export default {
                 
                 <nav>
                     <ul>
-                        <li>
+                        <li v-for="(elem, i) in datasNav">
                             <div>
-                                <img src="/public/img/buy-comics-digital-comics.png" alt="">
+                                <img :src="elem.img" :alt="elem.text">
                             </div>
 
                             <div>
-                                DIGITAL COMICS
-                            </div>
-                        </li>
-
-                        <li>
-                            <div>
-                                <img src="/public/img/buy-comics-digital-comics.png" alt="">
-                            </div>
-
-                            <div>
-                                DIGITAL COMICS
-                            </div>
-                        </li>
-
-                        <li>
-                            <div>
-                                <img src="/public/img/buy-comics-digital-comics.png" alt="">
-                            </div>
-
-                            <div>
-                                DIGITAL COMICS
-                            </div>
-                        </li>
-
-                        <li>
-                            <div>
-                                <img src="/public/img/buy-comics-digital-comics.png" alt="">
-                            </div>
-
-                            <div>
-                                DIGITAL COMICS
-                            </div>
-                        </li>
-
-                        <li>
-                            <div>
-                                <img src="/public/img/buy-comics-digital-comics.png" alt="">
-                            </div>
-
-                            <div>
-                                DIGITAL COMICS
+                                {{ elem.text }}
                             </div>
                         </li>
                     </ul>
@@ -244,9 +226,9 @@ export default {
 
         > section:nth-of-type(2){
             color: white;
-            background-color: blue;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            background-color: #0282F9;
+            padding-top: 20px;
+            padding-bottom: 20px;
 
             .container{
                 width: 1000px;
@@ -257,25 +239,21 @@ export default {
                 list-style: none;
 
                 > li {
+                    width: calc(100% / 5);
                     display: flex;
                     align-items: center;
+                    padding: 15px;
 
-                    > div:nth-child(1){
-
-                        img{
-                            width: 50px;
-                            height: 60px;
-                        }
+                
+                    img{
+                        width: 50px;
                     }
+                    
 
-                    > div:nth-child(2){
+                    div:nth-child(2){
                         padding-left: 10px;
+                        font-size: 15px;
                     }
-                }
-
-                > li:nth-child(2n){
-                    margin-left: 25px;
-                    margin-right: 25px;
                 }
             }
         }

@@ -95,16 +95,26 @@ export default {
         <section>
             <div class="jumbotron">
                 <!-- img background -->
+
+                <div>
+                    <a href="">
+                        CURRENT SERIES
+                    </a>
+                </div>
             </div>
 
             <div class="container">
 
                 <div class="all-comics">
 
-                    <AppMyCard 
-                        v-for="(oneComic, i) in comics" 
-                        :comic="oneComic"/>
+                    <AppMyCard v-for="(oneComic, i) in comics" :comic="oneComic"/>
 
+                </div>
+
+                <div class="load_more-button">
+                    <a href="">
+                        LOAD MORE
+                    </a>
                 </div>
 
             </div>
@@ -199,12 +209,36 @@ export default {
                 height: 400px;
                 background-image: url('/public/img/jumbotron.jpg');
                 background-size: 100% auto;
+                position: relative;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                    padding: 20px;
+                    background-color: #0282F9;
+                    font-size: 20px;
+                    position: absolute;
+                    bottom: -20px;
+                    left: 25%;
+                }
             }
             .all-comics{
                 padding-top: 50px;
                 display: flex;
                 flex-wrap: wrap;
                 gap: 15px;
+            }
+
+            .load_more-button{
+                text-align: center;
+                margin-top: 30px;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 20px;
+                    background-color: #0282F9;
+                    padding: 15px;
+                }
             }
         }
 
